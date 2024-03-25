@@ -10,7 +10,7 @@ const Navbar = () => {
       </button>
       <Link href="/">
         <h1 className="text-black font-bold text-2xl lg:text-4xl font-serif lg:tracking-wide uppercase font-unbounded">
-          Grove
+          GoodEats
         </h1>
       </Link>
       <Link href="/contact" className="mr-8">
