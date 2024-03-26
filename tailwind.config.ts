@@ -75,6 +75,7 @@ const config = {
     },
     fontFamily: {
       unbounded: ["Unbounded"],
+      berkshire: ["Berkshire Swash"],
     },
   },
   plugins: [require("tailwindcss-animate")],
