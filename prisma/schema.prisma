@@ -57,3 +57,15 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+model VeganMenu {
+  id    Int    @id @default(autoincrement())
+  name  String
+  price Float
+}
+
+model NonVeganMenu {
+  id    Int    @id @default(autoincrement())
+  name  String
+  price Float
+}
