@@ -11,7 +11,7 @@ const SignInWithGithub = () => {
           callbackUrl: `${window.location.origin}`,
         });
       }}
-      className="m-3 shadow-[0.25rem_0.25rem_0px_0px_rgba(0,0,0,1)] border-[1px] border-black bg-indigo-300 text-black hover:text-white"
+      className="m-3 shadow-[0.25rem_0.25rem_0px_0px_rgba(0,0,0,1)] border-2 border-black bg-indigo-300 text-black  hover:bg-lime-300"
     >
       Login With Github
     </Button>
