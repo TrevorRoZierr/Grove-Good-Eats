@@ -33,8 +33,16 @@ const Menu = () => {
       >
         Menu
       </h1>
-      {Nonveg && <p className="mb-6">Click on Menu to close</p>}
-      {Vegan && <p className="mb-6">Click on Menu to close</p>}
+      {Nonveg && (
+        <p className="mb-6 text-center">
+          To access full menu please reserve a table or pay a visit.
+        </p>
+      )}
+      {Vegan && (
+        <p className="mb-6 text-center">
+          To access full menu please reserve a table or pay a visit.
+        </p>
+      )}
       <div className="lg:mt-6 mt-4 flex flex-row">
         <Button
           className={
