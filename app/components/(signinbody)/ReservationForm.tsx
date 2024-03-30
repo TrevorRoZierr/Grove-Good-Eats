@@ -68,7 +68,6 @@ const ReservationForm = () => {
     toast({
       description: "Your Table has been reserved :)",
     });
-    router.push("/reservations/accessed");
   };
 
   return (
@@ -121,11 +120,19 @@ const ReservationForm = () => {
           onChange={handleToTimeChange}
           required
         /> */}
-        <div className="flex justify-center items-center text-center mt-4">
+        <div className="flex justify-between items-center flex-row text-center mt-4">
           <Button
             type="submit"
             className="border-black shadow-[0.25rem_0.25rem_0px_0px_rgba(0,0,0,1)] bg-pink-500 hover:bg-green-500 text-black border-2 rounded-xl"
             onClick={handleButton}
+          >
+            Book It!
+          </Button>
+          <Button
+            className="border-black shadow-[0.25rem_0.25rem_0px_0px_rgba(0,0,0,1)] bg-pink-500 hover:bg-green-500 text-black border-2 rounded-xl"
+            onClick={() => {
+              router.push("/reservations/accessed");
+            }}
           >
             Book It!
           </Button>
