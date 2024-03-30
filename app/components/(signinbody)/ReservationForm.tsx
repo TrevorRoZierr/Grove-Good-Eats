@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
-import { toast, useToast } from "@/components/ui/use-toast";
+import { toast } from "@/components/ui/use-toast";
+import { useRouter } from "next/navigation";
 
 const ReservationForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [date, setDate] = useState("");
-
-  const [disableRes, setDisableRes] = useState(false);
+  const router = useRouter();
 
   const handleSubmit = async (event: any) => {
     try {
@@ -49,17 +49,11 @@ const ReservationForm = () => {
     toast({
       description: "Your Table has been reserved :)",
     });
-    setDisableRes(true);
+    router.push("/reservations/accessed");
   };
 
   return (
-    <div
-      className={
-        disableRes
-          ? `hidden`
-          : `flex justify-center items-center mt-8 lg:mt-12 border-2 p-6 border-black shadow-[0.25rem_0.25rem_0px_0px_rgba(0,0,0,1)] rounded-2xl`
-      }
-    >
+    <div className="flex justify-center items-center mt-8 lg:mt-12 border-2 p-6 border-black shadow-[0.25rem_0.25rem_0px_0px_rgba(0,0,0,1)] rounded-2xl">
       <form action={handleSubmit}>
         <Label>Name:* </Label>
         <Input
