@@ -134,7 +134,7 @@ const ReservationForm = () => {
               router.push("/reservations/accessed");
             }}
           >
-            Book It!
+            Redirect
           </Button>
         </div>
       </form>
