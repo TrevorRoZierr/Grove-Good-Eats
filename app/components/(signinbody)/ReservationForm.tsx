@@ -68,6 +68,7 @@ const ReservationForm = () => {
     toast({
       description: "Your Table has been reserved :)",
     });
+    router.push("/reservations/accessed");
   };
 
   return (
