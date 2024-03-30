@@ -11,6 +11,9 @@ const ReservationForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [date, setDate] = useState("");
+  // const [fromTime, setFromTime] = useState(0);
+  // const [toTime, setToTime] = useState(0);
+
   const router = useRouter();
 
   const handleSubmit = async (event: any) => {
@@ -22,12 +25,20 @@ const ReservationForm = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, email, date: parsedDate }),
+        body: JSON.stringify({
+          name,
+          email,
+          date: parsedDate,
+          // fromTime,
+          // toTime,
+        }),
       });
 
       setName("");
       setEmail("");
       setDate("");
+      // setFromTime(0);
+      // setToTime(0);
     } catch (error) {
       console.error(error);
     }
@@ -44,6 +55,14 @@ const ReservationForm = () => {
   const handleDateChange = (event: any) => {
     setDate(event.target.value);
   };
+
+  // const handleFromTimeChange = (event: any) => {
+  //   setFromTime(event.target.value);
+  // };
+
+  // const handleToTimeChange = (event: any) => {
+  //   setToTime(event.target.value);
+  // };
 
   const handleButton = () => {
     toast({
@@ -75,15 +94,33 @@ const ReservationForm = () => {
           placeholder="whatever@domain"
           required
         />
-        <Label>Date & Time:* </Label>
+        <Label>Date:* </Label>
         <Input
-          type="datetime-local"
+          type="date"
           id="date"
           value={date}
           className="border-[1px] border-black mb-3"
           onChange={handleDateChange}
           required
         />
+        {/* <Label>From-Time:* </Label>
+        <Input
+          type="number"
+          id="time"
+          value={fromTime}
+          className="border-[1px] border-black mb-3"
+          onChange={handleFromTimeChange}
+          required
+        />
+        <Label>To-Time:* </Label>
+        <Input
+          type="number"
+          id="totime"
+          value={toTime}
+          className="border-[1px] border-black mb-3"
+          onChange={handleToTimeChange}
+          required
+        /> */}
         <div className="flex justify-center items-center text-center mt-4">
           <Button
             type="submit"
