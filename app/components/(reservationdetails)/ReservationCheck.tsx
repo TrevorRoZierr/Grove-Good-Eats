@@ -13,7 +13,7 @@ const ReservationCheck = () => {
   ];
 
   useEffect(() => {
-    fetch("https://grove-good-eats.vercel.app/api/reservations")
+    fetch(`${window.location.origin}/api/reservations`)
       .then((response) => response.json())
       .then((data) => {
         const formattedData = data.reserve.map((item: any) => ({

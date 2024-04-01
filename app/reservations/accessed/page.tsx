@@ -31,7 +31,7 @@ const AccessedReserve = () => {
         <CardContent>
           <ContentOptions
             name="Pay for reservation:"
-            link="/reservations/payment"
+            link="https://buy.stripe.com/test_dR65oleV29W71Pi288"
             buttonName="Payment"
           />
           <ContentOptions
