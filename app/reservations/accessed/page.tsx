@@ -41,8 +41,8 @@ const AccessedReserve = () => {
           />
           <ContentOptions
             name="Full menu reservation:"
-            link="/reservations/menu"
-            buttonName="Menu"
+            link="/reservations/order"
+            buttonName="Order"
           />
         </CardContent>
         <div className="flex justify-center items-center text-center">
