@@ -26,8 +26,8 @@ const ReservationCheck = () => {
   }, []);
 
   return (
-    <div className="grid lg:grid-cols-3 grid-cols-2 lg:gap-10 gap-7 lg:m-12 mt-10">
-      {detailCheck.map((item: any) => (
+    <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-10 gap-5 lg:m-12 m-10">
+      {detailCheck.map((item: any) => ( 
         <div
           className="lg:p-6 p-3 border-2 border-black rounded-lg"
           key={item.id}
