@@ -41,7 +41,7 @@ const AccessedReserve = () => {
           />
           <ContentOptions
             name="Full menu reservation:"
-            link="/reservations/order"
+            link="https://grove-ge-bill.vercel.app/"
             buttonName="Order"
           />
         </CardContent>
